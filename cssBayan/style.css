@@ -10,9 +10,6 @@ h1  {
     font-size: 2rem;
     font-family: 'Climate Crisis', cursive;
 }
-.meme-title span {
-
-}
 .wrapper {
     width: 80%;
     margin: 0 auto;
@@ -28,11 +25,12 @@ h1  {
     border-bottom: 0.2rem solid  rgb(156, 156, 233);
 }
 .accordion-item-input {
-    width: 0;
-    height: 0;
+    appearance: none;
 }
 .accordion-item-label { 
-    line-height: 0;
+}
+.accordion-item-label span{ 
+    cursor: pointer;
 }
 .meme-title {
     display: flex;
@@ -42,6 +40,7 @@ h1  {
     margin-right: 1%;
     margin-bottom: 0;
     color: rgb(241, 29, 29);
+    transition:1s;
 }
 .pop {
     opacity: 0;
@@ -53,15 +52,12 @@ h1  {
     visibility: hidden;
     transition: 0.5s;
     margin: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
     margin-left: 25%;
     
 }
 
-.accordion-item-input:checked ~ .accordion-item-label {
-
-}
 .accordion-item-input:checked ~ .accordion-item-label > .content-img {
     padding-top: 1rem;
     visibility: visible;
@@ -69,8 +65,15 @@ h1  {
     width: 50%;
     cursor: pointer;
 } 
+.accordion-item-input:active ~ .accordion-item-label > .content-img {
+    opacity: 0.6;
+    transition:1s;
+} 
+.accordion-item-input:checked ~ .accordion-item-label > .meme-title {
+    color:rgb(18, 99, 136);
+    transition: 1s;
 
-
+}
 .accordion-item-input:hover ~ .accordion-item-label > .meme-title > .pop {
     opacity: 100%;
     transition: 0.5s;
@@ -78,7 +81,7 @@ h1  {
 } 
 @media (hover:hover){
     .accordion:hover  .pop {opacity: 100%;} 
-    .accordion:hover  .meme-title {color:rgb(89, 189, 235)} 
+    .accordion:hover  .meme-title {color:rgb(18, 99, 136)} 
     .accordion-item:hover .content-img {
         padding-top: 1rem;
         visibility: visible;
