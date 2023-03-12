@@ -1,46 +1,97 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    background-color: aliceblue;
+    margin: 0;
     padding: 0;
+    font-family: 'Quicksand', sans-serif;;
+    background-color:bisque;
     
+    padding: 1.5rem 0 1.5rem 0;
+}
+h1  {
+    font-size: 2rem;
+    font-family: 'Climate Crisis', cursive;
+}
+.meme-title span {
+
 }
 .wrapper {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 .title{
-    border-bottom: 0.3em solid red;
-    line-height: 16px;
+    border-bottom: 0.2rem solid rgb(156, 156, 233);
 }
 .accordion {
     
 }
-.accordion-item {
-    border-bottom: 0.3em solid red;
+.accordion-item { 
+    font-size: 1rem;
+    border-bottom: 0.2rem solid  rgb(156, 156, 233);
 }
 .accordion-item-input {
     appearance: none;
-}
-.accordion-item-label {
-    
     
 }
-.accordion-item-label:hover {
-    cursor: pointer;
-    
+.accordion-item-label { 
+    line-height: 0;
 }
-.accordion-item-content {
-    display: none;
+.meme-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0;
+}
+.pop {
+    opacity: 0;
+}
+
+.content-img {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    margin: auto;
+    margin-left: 25%;
     
 }
 
 .accordion-item-input:checked ~ .accordion-item-label {
 
 }
-.accordion-item-input:checked ~ .accordion-item-content {
+.accordion-item-input:checked ~ .accordion-item-label > .content-img {
+    padding-top: 1rem;
+    visibility: visible;
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+} 
+
+
+.accordion-item-input:hover ~ .accordion-item-label > .meme-title > .pop {
+    opacity: 100%;
+    transition: 0.5s;
+    transform: rotate(180deg);
+} 
+@media (hover:hover){
+    .accordion:hover  .pop {opacity: 100%;} 
+    .accordion:hover  .meme-title {color:rgb(43, 189, 189)} 
+    .accordion:hover  {cursor: pointer;}
+    .accordion-item:hover .content-img {
+        padding-top: 1rem;
+        visibility: visible;
+        height: 100%;
+        width: 50%;
+        cursor: pointer;
+    } 
     
 }
-.accordion-item-input:hover ~ .accordion-item-content {
-    display: block;
+@media (min-width:820px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    .accordion-item { 
+        font-size: 1.5rem;
+    }
 }

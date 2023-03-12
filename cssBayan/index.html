@@ -6,40 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="wrapper">
         <div class="title">
-            <h1>Bayan</h1>
+            <h1> CSS Bayan</h1>
         </div>
         <div class="accordion">
             <div class="accordion-item">
-                <input class="accordion-item-input" type="radio" name="meme" id="meme1">
-                <label for="meme1" class="accordion-item-input">What about draniki?</label>
-                <div class="accordion-item-content">
-                    <img src="assets/img/draniki_meme.jpg" alt="dramiki">
-                </div>
+                <input class="accordion-item-input" type="radio" name="meme" id="meme1" checked>
+                <label for="meme1" class="accordion-item-label">
+                    <div class="meme-title">
+                        <span >What about draniki?</span>
+                        <span class="pop">▼</span>
+                    </div>
+                    <img class="content-img" src="assets/img/draniki_meme.jpg" alt="dramiki">
+                </label>
             </div>
             <div class="accordion-item">
                 <input class="accordion-item-input" type="radio" name="meme" id="meme2">
-                <label for="meme2" class="accordion-item-input">Aristocratic programmer</label>
-                <div class="accordion-item-content">
-                    <img src="assets/img/aristocratic_programmer_meme.jpg" alt="programmer">
-                </div>
+                <label for="meme2" class="accordion-item-label">
+                    <div class="meme-title">
+                        <span>Aristocratic programmer</span>
+                        <span class="pop">▼</span>
+                    </div>
+                    <img class="content-img" src="assets/img/aristocratic_programmer_meme.jpg" alt="programmer">
+                </label>    
             </div>
             <div class="accordion-item">
                 <input class="accordion-item-input" type="radio" name="meme" id="meme3">
-                <label for="meme3" class="accordion-item-input">Lions's sex</label>
-                <div class="accordion-item-content">
-                    <img src="assets/img/lions_sex_meme.jpg" alt="lions">
-                </div>
+                <label for="meme3" class="accordion-item-label">
+                    <div class="meme-title">
+                        <span>Lions's sex</span>
+                        <span class="pop">▼</span>
+                    </div>
+                    <img class="content-img" src="assets/img/lions_sex_meme.jpg" alt="lions">
+                </label>
             </div>
             <div class="accordion-item">
                 <input class="accordion-item-input" type="radio" name="meme" id="meme4">
-                <label for="meme4" class="accordion-item-input">Last one</label>
-                <div class="accordion-item-content">
-                    <img src="assets/img/sexy_karatckevich_meme.jpg" alt="Karatckevich">
-                </div>
+                <label for="meme4" class="accordion-item-label">
+                    <div class="meme-title">
+                        <span>Last one</span>
+                        <span class="pop">▼</span>
+                    </div>
+                    <img class="content-img" src="assets/img/sexy_karatckevich_meme.jpg" alt="Karatckevich">
+                </label>
             </div>
        </div>
    </div>
