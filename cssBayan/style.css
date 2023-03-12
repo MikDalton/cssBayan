@@ -69,6 +69,9 @@ h1  {
     opacity: 0.6;
     transition:1s;
 } 
+.accordion-item-input:active ~ .accordion-item-label > .meme-title {
+    color: rgb(241, 29, 29);
+}
 .accordion-item-input:checked ~ .accordion-item-label > .meme-title {
     color:rgb(18, 99, 136);
     transition: 1s;
